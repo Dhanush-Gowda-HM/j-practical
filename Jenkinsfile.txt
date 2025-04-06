@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run Groovy Script') {
+            steps {
+                script {
+                    println "👋 Hello from Groovy on Ubuntu Jenkins!"
+                    println "📅 Current date: " + new Date()
+                    println "👤 Running as user: " + System.getProperty("user.name")
+                }
+            }
+        }
+    }
+}
